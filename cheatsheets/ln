@@ -1,2 +1,5 @@
 To create a symlink:
 ln -s path/to/the/target/directory name-of-symlink
+
+To create a hard link (caveat - link target needs to remain on the same filesystem as source_file.  This will also increase the inode reference number of the source_file by one - man stat(1)):
+ln source_file name_of_link
